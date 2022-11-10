@@ -294,6 +294,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pnlFiltro = new javax.swing.JPanel();
         reloj1 = new parcialn3_urban.Reloj();
         filtrar2Txt = new Texto.TxtCampoEmail();
+        jButton1 = new javax.swing.JButton();
         pnlGeneral = new javax.swing.JPanel();
         pnlBotones = new javax.swing.JPanel();
         nuevoBtn = new javax.swing.JButton();
@@ -335,14 +336,24 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("ACTUALIZAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlFiltroLayout = new javax.swing.GroupLayout(pnlFiltro);
         pnlFiltro.setLayout(pnlFiltroLayout);
         pnlFiltroLayout.setHorizontalGroup(
             pnlFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFiltroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(filtrar2Txt, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
-                .addGap(345, 345, 345)
+                .addComponent(filtrar2Txt, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addGap(221, 221, 221)
                 .addComponent(reloj1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -351,9 +362,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(pnlFiltroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(filtrar2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(filtrar2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1))
                     .addComponent(reloj1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlFiltro, java.awt.BorderLayout.NORTH);
@@ -813,6 +826,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
         _filtrar(filtrar2Txt.getText().trim());
     }//GEN-LAST:event_filtrar2TxtKeyReleased
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        _cargarCliente();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -861,6 +878,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser fecha_nac;
     private Texto.TxtCampoEmail filtrar2Txt;
     private Texto.TxtNro idTxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton modificarBtn;
     private Texto.TxtCampoMay nombresTxt;
